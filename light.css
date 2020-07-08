@@ -73,6 +73,7 @@ button {
   -o-border-radius: 3px;
   margin: 2px;
   cursor: pointer;
+  outline: none;
 }
 
 button a {
