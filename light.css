@@ -72,6 +72,7 @@ button {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
+  font-size: 0.7;
 }
 
 button a {
@@ -83,7 +84,9 @@ button a {
   margin-left: 10%;
   margin-top: 0.7%;
 }
-
+.fab {
+  font-size: 1.2em;
+}
 @media (max-width: 640px) {
   h1 {
     margin-top: 15vh;
