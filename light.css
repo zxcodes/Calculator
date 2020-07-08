@@ -4,7 +4,6 @@
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
-
 }
 body {
   background-color: rgb(28, 231, 221);
@@ -33,7 +32,6 @@ input {
   border: none;
   cursor: pointer;
   width: 70px;
-  font-weight: 400;
   background-color: #fff;
   border: none;
   outline: none;
