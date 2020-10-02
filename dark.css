@@ -91,6 +91,7 @@ a {
 }
 .bottom-buttons {
   display: flex;
+  margin-left: 0.5px;
 }
 .fab {
   font-size: 1.1em;
