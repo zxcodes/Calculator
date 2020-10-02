@@ -13,6 +13,14 @@ body {
   -ms-transition: 0.8s;
   -o-transition: 0.8s;
 }
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 h1 {
   text-align: center;
   margin-bottom: 1.5%;
@@ -20,10 +28,6 @@ h1 {
 }
 .container {
   width: 300px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 .result {
   width: 59.1%;
