@@ -37,10 +37,6 @@ input {
   border: none;
   outline: none;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
 }
 
 .first-row,
@@ -71,10 +67,7 @@ button {
   cursor: pointer;
   outline: none;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+
   font-size: 0.8em;
   font-weight: 200;
 }
@@ -89,10 +82,7 @@ a {
   cursor: pointer;
   outline: none;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+
   font-size: 0.8em;
   font-weight: 200;
 }
