@@ -66,7 +66,7 @@ input[type="button"]:hover {
 button {
   border: none;
   background-color: rgb(41, 38, 38);
-  padding: 10px;
+  padding: 8px;
   color: white;
   margin: 2px;
   cursor: pointer;
@@ -81,7 +81,7 @@ a {
   text-decoration: none;
   border: none;
   background-color: rgb(41, 38, 38);
-  padding: 10px;
+  padding: 8px;
   color: white;
   margin: 2px;
   cursor: pointer;
@@ -93,7 +93,7 @@ a {
 }
 .bottom-buttons {
   display: flex;
-  margin-left: 0.5px;
+  margin-left: -2.3px;
 }
 .fab {
   font-size: 1.1em;
