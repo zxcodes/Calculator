@@ -7,7 +7,7 @@
   <title>Calculator</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="light.css" id="theme" />
+  <link rel="stylesheet" href="styles/light.css" id="theme" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
 </head>
 
@@ -18,7 +18,7 @@
 
       <div class="first-row">
         <input type="text" name="result" class="result" id="result" value="" placeholder="Result" readonly />
-        <input type="button" value="C" onclick="clearScreen()" class="clear" />
+        <input type="button" value="C" onclick="clearScreen()" id="clear" />
       </div>
       <div class="second-row">
         <input type="button" value="1" onclick="liveScreen(1)" id="one" />
@@ -48,7 +48,7 @@
       <div class="bottom-buttons">
         <a href="https://github.com/zxcodes/JavaScript-Calculator"><i class="fab fa-github"></i>
           Source</a>
-        <button onclick="switchTheme()" id="dark-mode">
+        <button onclick="changeTheme()" id="dark-mode">
           Dark Mode 🌙
         </button>
       </div>
@@ -56,7 +56,7 @@
   </div>
   <!-- Fontawesome Script -->
   <script src="https://kit.fontawesome.com/f28b055962.js" crossorigin="anonymous"></script>
-  <script src="script.js" sync defer></script>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
