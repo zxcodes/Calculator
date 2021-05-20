@@ -7,7 +7,11 @@ function clearScreen() {
 }
 // Displays entered value on screen.
 function liveScreen(value) {
-  document.getElementById("result").value += value;
+  let res = document.getElementById("result");
+  if(res.value == "undefined"){
+    res.value = "";
+  }
+  res.value += value;
 }
 // Swaps the style sheet in order to  achieve dark mode.
 function changeTheme() {
