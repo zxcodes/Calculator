@@ -43,7 +43,7 @@
 
         <input type="button" value="0" id="zero" onclick="liveScreen(0)" />
         <input type="button" value="." class="dot" onclick="liveScreen('.')" />
-        <input type="button" value="=" onclick="result.value = eval(result.value)" />
+        <input type="button" value="=" onclick="result.value = eval(result.value||null)" />
       </div>
       <div class="bottom-buttons">
         <a href="https://github.com/zxcodes/JavaScript-Calculator"><i class="fab fa-github"></i>
