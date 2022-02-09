@@ -16,6 +16,8 @@
   align-items: center;
   background-color: rgb(28, 231, 221);
   transition: 0.8s all;
+  /* to hide the scrollbar during animation */
+  overflow: hidden;
 }
 h1 {
   text-align: center;
@@ -24,7 +26,19 @@ h1 {
 }
 .container {
   width: 300px;
+  animation: container-collision-animation 1s 1s 1;
 }
+
+/* container collision with clear animation */
+@keyframes container-collision-animation {
+  0%{
+    transform: translateX(-20px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
 .result {
   width: 59.1%;
 }
@@ -61,7 +75,19 @@ input[type="button"]:hover {
 #clear {
   color: #fff;
   background-color: rgb(255, 25, 25);
+  animation: clear-button-animation 1s linear 1;
 }
+
+/* animation for clear button */
+@keyframes clear-button-animation {
+  0%{
+    transform: translateX(2000px) skew(-75deg);
+  }
+  100%{
+    transform: translateX(0px) skew(0deg);
+  }
+}
+
 button {
   border: none;
   background-color: rgb(41, 38, 38);
