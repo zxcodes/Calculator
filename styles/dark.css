@@ -74,6 +74,7 @@ button {
   border-radius: 4px;
   font-size: 0.8em;
   font-weight: 200;
+  font-weight: 600;
 }
 
 a {
@@ -86,7 +87,7 @@ a {
   margin: 2px;
   border-radius: 4px;
   font-size: 0.8em;
-  font-weight: 200;
+  font-weight: 600;
 }
 .bottom-buttons {
   display: flex;
@@ -94,4 +95,5 @@ a {
 }
 .fab {
   font-size: 1.1em;
+  padding: 0 0.2em;
 }
