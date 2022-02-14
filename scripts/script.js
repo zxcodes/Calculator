@@ -4,6 +4,54 @@ let darkTheme = "styles/dark.css";
 //adding event handler on the document to handle keyboard inputs
 document.addEventListener("keydown", keyboardInputHandler);
 
+function brightenTheButtonOnKeyBoardInput(key){
+  const idObject = new Map();
+  // the key is the value of the key that has been pressed,
+  // the value is the id for that button
+  idObject.set("0","zero");
+  idObject.set('1',"one");
+  idObject.set("2","two");
+  idObject.set("3","three");
+  idObject.set("4","four");
+  idObject.set("5","five");
+  idObject.set("6","six");
+  idObject.set("7","seven");
+  idObject.set("8","eight");
+  idObject.set("9","nine");
+
+  idObject.set("+","plus");
+  idObject.set("-","minus");
+  idObject.set("*","multiply");
+  idObject.set("/","divide");
+
+  idObject.set(".","dot");
+  idObject.set("Enter","equals");
+
+  //getting id of the button pressed
+  const id = idObject.get(key);
+
+  //if any other key is pressed then return from this function
+  if(id===undefined){
+    return;
+  }
+
+  //getting the button to brighten it
+  const button = document.getElementById(id);
+  console.log(button);
+
+  //add button press visual effects
+  button.style.opacity="0.5";
+  button.style.transform = "scale(0.8)";
+  button.style.transition = "all 0.1s";
+
+  //undo the effects after 0.1s
+  setTimeout(()=>{
+    button.style.opacity="1";
+    button.style.transform = "scale(1)"
+
+  },100)
+}
+
 //function to handle keyboard inputs
 function keyboardInputHandler(e) {
   //grabbing the liveScreen
@@ -62,6 +110,9 @@ function keyboardInputHandler(e) {
     //remove the last element in the string
     res.value = resultInput.substring(0, res.value.length - 1);
   }
+
+  //brighten the button pressed
+  brightenTheButtonOnKeyBoardInput(e.key);
 }
 
 // Clears the screen on click of C button.
