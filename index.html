@@ -20,29 +20,40 @@
         <input type="button" value="C" onclick="clearScreen()" id="clear" />
       </div>
       <div class="second-row">
+        <input type="button" value="sin" id="sin"  onclick="liveScreen('Math.sin(')"/>
+        <input type="button" value="cos" id="cos"  onclick="liveScreen('Math.cos(')"/>
+        <input type="button" value="(" id="(" onclick="liveScreen('(')" />
+        <input type="button" value=")" id=")" onclick="liveScreen(')')" />
+      </div>
+      <div class="third-row">
+        <input type="button" value="π" id="π"  onclick="liveScreen(3.14159)"/>
+        <input type="button" value="tan" id="tan"  onclick="liveScreen('Math.tan(')"/>
+        <input type="button" value=" √" id="sqrt"  onclick="liveScreen('Math.sqrt(')"/>
+        <input type="button" value="/" onclick="liveScreen('/')" />
+      </div>
+      <div class="fifth-row">
         <input type="button" value="1" onclick="liveScreen(1)" id="one" />
         <input type="button" value="2" onclick="liveScreen(2)" id="two" />
         <input type="button" value="3" id="three" onclick="liveScreen(3)" />
         <input type="button" value="+" onclick="liveScreen('+')" />
       </div>
-      <div class="third-row">
+      <div class="sixth-row">
         <input type="button" value="4" id="four" onclick="liveScreen(4)" />
         <input type="button" value="5" id="five" onclick="liveScreen(5)" />
         <input type="button" value="6" id="six" onclick="liveScreen(6)" />
         <input type="button" value="-" onclick="liveScreen('-')" />
       </div>
-      <div class="fourth-row">
+      <div class="seventh-row">
         <input type="button" value="7" id="seven" onclick="liveScreen(7)" />
         <input type="button" value="8" id="eight" onclick="liveScreen(8)" />
         <input type="button" value="9" id="nine" onclick="liveScreen(9)" />
         <input type="button" value="x" onclick="liveScreen('*')" />
       </div>
-      <div class="fifth-row">
-        <input type="button" value="/" onclick="liveScreen('/')" />
-
+      <div class="eighth-row">
+        
         <input type="button" value="0" id="zero" onclick="liveScreen(0)" />
         <input type="button" value="." class="dot" onclick="liveScreen('.')" />
-        <input type="button" value="=" onclick="result.value = eval(result.value||null)" />
+        <input type="button" style=" width:144px;"  value="=" onclick="result.value = eval(result.value||null)" />
       </div>
       <div class="bottom-buttons">
         <a href="https://github.com/zxcodes/JavaScript-Calculator"><i class="fab fa-github"></i>

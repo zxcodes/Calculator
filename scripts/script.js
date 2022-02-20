@@ -8,7 +8,6 @@ document.addEventListener("keydown", keyboardInputHandler);
 function keyboardInputHandler(e) {
   //grabbing the liveScreen
   let res = document.getElementById("result");
-
   //numbers
   if (e.key === "0") {
     res.value += "0";
@@ -43,6 +42,10 @@ function keyboardInputHandler(e) {
     res.value += "*";
   } else if (e.key === "/") {
     res.value += "/";
+  } else if (e.key == "(") {
+    res.value += "("
+  }else if (e.key == ")") {
+      res.value += ")"
   }
 
   //decimal key

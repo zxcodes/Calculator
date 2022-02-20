@@ -44,7 +44,9 @@ input {
 .second-row,
 .third-row,
 .fourth-row,
-.fifth-row {
+.fifth-row,
+.sixth-row,
+.seventh-row {
   margin-bottom: 3px;
 }
 input[type="button"] {
