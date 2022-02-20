@@ -6,6 +6,9 @@ document.addEventListener("keydown", keyboardInputHandler);
 
 //function to handle keyboard inputs
 function keyboardInputHandler(e) {
+  // to fix the default behavior of browser,
+  // enter and backspace were causing undesired behavior when some key was already in focus. 
+  e.preventDefault();
   //grabbing the liveScreen
   let res = document.getElementById("result");
 
