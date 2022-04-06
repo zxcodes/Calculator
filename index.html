@@ -16,7 +16,8 @@
     <div class="container">
       <h1>Calculator</h1>
       <div class="first-row">
-        <input type="text" name="result" class="result" id="result" value="" placeholder="Result" readonly />
+        <textarea class="result" id="result" placeholder="Result" value=""></textarea>
+        <input type="text" name="input" class="input" id="input" value="" placeholder="Input" readonly />
         <input type="button" value="C" onclick="clearScreen()" id="clear" />
       </div>
       <div class="second-row">
@@ -39,14 +40,12 @@
       </div>
       <div class="fifth-row">
         <input type="button" value="/" onclick="liveScreen('/')" />
-
         <input type="button" value="0" id="zero" onclick="liveScreen(0)" />
         <input type="button" value="." class="dot" onclick="liveScreen('.')" />
-        <input type="button" value="=" onclick="result.value = eval(result.value||null)" />
+        <input type="button" value="=" onclick="result.value = eval(input.value||null)" />
       </div>
+
       <div class="bottom-buttons">
-        <a href="https://github.com/zxcodes/JavaScript-Calculator"><i class="fab fa-github"></i>
-          Source</a>
         <button onclick="changeTheme()" id="dark-mode">
           Light Mode ☀️
         </button>
@@ -55,7 +54,7 @@
   </div>
   <!-- Fontawesome Script -->
   <script src="https://kit.fontawesome.com/f28b055962.js" crossorigin="anonymous"></script>
-  <script src="scripts/script.js"></script>
+  <script  src="scripts/script.js"></script>
 </body>
 
 </html>

@@ -31,7 +31,7 @@ h1 {
 .result {
   width: 59.1%;
 }
-input {
+input, textarea {
   padding: 25px;
   color: rgb(255, 255, 255);
   font-size: 1em;

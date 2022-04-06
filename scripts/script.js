@@ -7,7 +7,8 @@ document.addEventListener("keydown", keyboardInputHandler);
 //function to handle keyboard inputs
 function keyboardInputHandler(e) {
   //grabbing the liveScreen
-  let res = document.getElementById("result");
+  let res = document.getElementById("input");
+  let result = document.getElementById("result");
 
   //numbers
   if (e.key === "0") {
@@ -52,7 +53,10 @@ function keyboardInputHandler(e) {
 
   //press enter to see result
   if (e.key === "Enter") {
-    res.value = eval(result.value || null);
+    //result.value = eval(result.value || null);
+    result.value = eval(result.value || null);
+    result = eval(result.value || null);
+    console.log(result);
   }
 
   //backspace for removing the last input
@@ -66,11 +70,11 @@ function keyboardInputHandler(e) {
 
 // Clears the screen on click of C button.
 function clearScreen() {
-  document.getElementById("result").value = "";
+  document.getElementById("input").value = "";
 }
 // Displays entered value on screen.
 function liveScreen(value) {
-  let res = document.getElementById("result");
+  let res = document.getElementById("input");
   if (!res.value) {
     res.value = "";
   }
