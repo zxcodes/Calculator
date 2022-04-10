@@ -6,9 +6,11 @@
 	font-family: "Open Sans", sans-serif;
 	font-weight: bold;
 }
+
 ::placeholder {
 	color: rgb(221, 221, 221);
 }
+
 .wrapper {
 	height: 100vh;
 	width: 100%;
@@ -25,6 +27,7 @@ h1 {
 	margin-bottom: 1.5%;
 	color: #fff;
 }
+
 .container {
 	width: 300px;
 }
@@ -50,11 +53,11 @@ input {
 	resize: none;
 }
 
- textarea {
+textarea {
 	padding: 25px;
 	color: rgb(255, 255, 255);
 	font-size: 1em;
-	cursor:default;
+	cursor: default;
 	width: 218px;
 	background-color: rgb(47, 51, 50);
 	border: none;
@@ -62,8 +65,8 @@ input {
 	border-radius: 4px;
 	overflow: hidden;
 	resize: none;
-	vertical-align: top; 
-} 
+	vertical-align: top;
+}
 
 
 .top-row,
@@ -74,14 +77,17 @@ input {
 .fifth-row {
 	margin-bottom: 3px;
 }
+
 input[type="text"] {
 	background-color: rgb(47, 51, 50);
 	width: 218px;
 }
+
 input[type="button"]:hover {
 	background-color: rgb(160, 160, 160);
 	color: #fff;
 }
+
 #clear {
 	color: #fff;
 	background-color: rgb(255, 42, 42);
@@ -119,10 +125,12 @@ a {
 	font-size: 0.8em;
 	font-weight: 600;
 }
+
 .bottom-buttons {
 	display: flex;
 	margin-left: -2.3px;
 }
+
 .fab {
 	font-size: 1.1em;
 	padding: 0 0.2em;

@@ -17,11 +17,13 @@
 	background-color: rgb(28, 231, 221);
 	transition: 0.8s all;
 }
+
 h1 {
 	text-align: center;
 	margin-bottom: 1.5%;
 	color: #fff;
 }
+
 .container {
 	width: 300px;
 }
@@ -42,8 +44,7 @@ h1 {
 }
 
 
-input,
-textarea {
+input {
 	padding: 25px;
 	color: rgb(87, 87, 87);
 	font-size: 1em;
@@ -57,6 +58,22 @@ textarea {
 	resize: none;
 }
 
+textarea {
+	padding: 25px;
+	color: rgb(87, 87, 87);
+	font-size: 1em;
+	cursor: default;
+	width: 218px;
+	background-color: #fff;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	overflow: hidden;
+	resize: none;
+	vertical-align: top;
+}
+
+.top-row,
 .first-row,
 .second-row,
 .third-row,
@@ -64,21 +81,32 @@ textarea {
 .fifth-row {
 	margin-bottom: 3px;
 }
+
 input[type="button"] {
 	color: rgb(122, 122, 122);
 }
+
 input[type="text"] {
 	background-color: rgb(255, 255, 255);
 	width: 218px;
 }
+
 input[type="button"]:hover {
 	background-color: rgb(37, 35, 59);
 	color: #fff;
 }
+
 #clear {
 	color: #fff;
 	background-color: rgb(255, 25, 25);
 }
+
+#clearEntry {
+	color: #fff;
+	background-color: rgb(255, 42, 42);
+	height: 94px;
+}
+
 button {
 	border: none;
 	background-color: rgb(41, 38, 38);
@@ -105,10 +133,12 @@ a {
 	font-size: 0.8em;
 	font-weight: 600;
 }
+
 .bottom-buttons {
 	display: flex;
 	margin-left: -2.3px;
 }
+
 .fab {
 	font-size: 1.1em;
 	padding: 0 0.2em;
