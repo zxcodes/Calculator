@@ -15,8 +15,11 @@
   <div class="wrapper">
     <div class="container">
       <h1>Calculator</h1>
-      <div class="first-row">
+      <div class="top-row">
         <textarea class="result" id="result" placeholder="Result" value=""></textarea>
+        <input type="button" value="CE" onclick="clearEntryScreen()" id="clearEntry" />
+      </div>
+      <div class="first-row">
         <input type="text" name="input" class="input" id="input" value="" placeholder="Input" readonly />
         <input type="button" value="C" onclick="clearScreen()" id="clear" />
       </div>
@@ -54,7 +57,7 @@
   </div>
   <!-- Fontawesome Script -->
   <script src="https://kit.fontawesome.com/f28b055962.js" crossorigin="anonymous"></script>
-  <script  src="scripts/script.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>

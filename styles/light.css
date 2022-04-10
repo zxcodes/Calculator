@@ -1,43 +1,60 @@
 /* CSS Reset & Global Styles */
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Open Sans", sans-serif;
+	font-weight: bold;
 }
 
 .wrapper {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(28, 231, 221);
-  transition: 0.8s all;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgb(28, 231, 221);
+	transition: 0.8s all;
 }
 h1 {
-  text-align: center;
-  margin-bottom: 1.5%;
-  color: #fff;
+	text-align: center;
+	margin-bottom: 1.5%;
+	color: #fff;
 }
 .container {
-  width: 300px;
+	width: 300px;
 }
+
 .result {
-  width: 59.1%;
+	width: 218px;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
 }
-input, textarea {
-  padding: 25px;
-  color: rgb(87, 87, 87);
-  font-size: 1em;
-  cursor: pointer;
-  width: 70px;
-  background-color: #fff;
-  border: none;
-  outline: none;
-  border-radius: 4px;
+
+.input {
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+
+input,
+textarea {
+	padding: 25px;
+	color: rgb(87, 87, 87);
+	font-size: 1em;
+	cursor: pointer;
+	width: 70px;
+	background-color: #fff;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	overflow: hidden;
+	resize: none;
 }
 
 .first-row,
@@ -45,54 +62,54 @@ input, textarea {
 .third-row,
 .fourth-row,
 .fifth-row {
-  margin-bottom: 3px;
+	margin-bottom: 3px;
 }
 input[type="button"] {
-  color: rgb(122, 122, 122);
+	color: rgb(122, 122, 122);
 }
 input[type="text"] {
-  background-color: rgb(255, 255, 255);
-  width: 218px;
+	background-color: rgb(255, 255, 255);
+	width: 218px;
 }
 input[type="button"]:hover {
-  background-color: rgb(37, 35, 59);
-  color: #fff;
+	background-color: rgb(37, 35, 59);
+	color: #fff;
 }
 #clear {
-  color: #fff;
-  background-color: rgb(255, 25, 25);
+	color: #fff;
+	background-color: rgb(255, 25, 25);
 }
 button {
-  border: none;
-  background-color: rgb(41, 38, 38);
-  padding: 8px;
-  color: white;
-  margin: 2px;
-  cursor: pointer;
-  outline: none;
-  border-radius: 4px;
-  font-size: 0.8em;
-  font-weight: 600;
+	border: none;
+	background-color: rgb(41, 38, 38);
+	padding: 8px;
+	color: white;
+	margin: 2px;
+	cursor: pointer;
+	outline: none;
+	border-radius: 4px;
+	font-size: 0.8em;
+	font-weight: 600;
 }
 
 a {
-  text-decoration: none;
-  border: none;
-  background-color: rgb(41, 38, 38);
-  padding: 8px;
-  color: white;
-  margin: 2px;
-  cursor: pointer;
-  outline: none;
-  border-radius: 4px;
-  font-size: 0.8em;
-  font-weight: 600;
+	text-decoration: none;
+	border: none;
+	background-color: rgb(41, 38, 38);
+	padding: 8px;
+	color: white;
+	margin: 2px;
+	cursor: pointer;
+	outline: none;
+	border-radius: 4px;
+	font-size: 0.8em;
+	font-weight: 600;
 }
 .bottom-buttons {
-  display: flex;
-  margin-left: -2.3px;
+	display: flex;
+	margin-left: -2.3px;
 }
 .fab {
-  font-size: 1.1em;
-  padding: 0 0.2em;
+	font-size: 1.1em;
+	padding: 0 0.2em;
 }
