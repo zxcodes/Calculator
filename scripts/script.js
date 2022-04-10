@@ -71,10 +71,8 @@ function keyboardInputHandler ( e )
   //press enter to see result
   if ( e.key === "Enter" )
   {
-    //result.value = eval(result.value || null);
     result.value = eval( result.value || null );
     result = eval( result.value || null );
-    console.log( result );
   }
 
   //backspace for removing the last input
@@ -87,11 +85,24 @@ function keyboardInputHandler ( e )
   }
 }
 
+
 // Clears the screen on click of C button.
 function clearScreen ()
 {
   document.getElementById( "input" ).value = "";
 }
+
+
+function enter(){
+  let result = document.getElementById( "result" );
+  let a = [];
+  a = eval(input.value||null); 
+  result.value  = a;
+  // increase count value when ever this function is called
+  console.log(a[2]);
+
+}
+
 
 
 //remove the last element in the string using button
