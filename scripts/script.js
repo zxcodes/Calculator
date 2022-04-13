@@ -88,3 +88,16 @@ function changeTheme() {
     darkMode.innerHTML = "Dark Mode 🌙";
   }
 }
+function copyResult(){
+  let res = document.getElementById("result")
+  copyToClipboard(res.value)
+}
+// function which copy the value to clipboard
+function copyToClipboard(text) {
+  var sampleTextarea = document.createElement("textarea");
+  document.body.appendChild(sampleTextarea);
+  sampleTextarea.value = text; //save main text in it
+  sampleTextarea.select(); //select textarea contenrs
+  document.execCommand("copy");
+  document.body.removeChild(sampleTextarea);
+}
