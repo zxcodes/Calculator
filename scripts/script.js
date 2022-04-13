@@ -88,6 +88,7 @@ function changeTheme() {
     darkMode.innerHTML = "Dark Mode 🌙";
   }
 }
+// copy result function
 function copyResult(){
   let res = document.getElementById("result")
   copyToClipboard(res.value)
