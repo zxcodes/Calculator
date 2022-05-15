@@ -68,13 +68,17 @@ function keyboardInputHandler(e) {
 function clearScreen() {
   document.getElementById("result").value = "";
 }
+
 // Displays entered value on screen.
-function liveScreen(value) {
+function liveScreen(enteredValue) {
   let res = document.getElementById("result");
   if (!res.value) {
     res.value = "";
   }
-  res.value += value;
+  if (res.value === "NaN") {
+    res.value = "Can't divide 0 with 0.";
+  }
+  res.value += enteredValue;
 }
 // Swaps the stylesheet in order to  achieve dark mode.
 function changeTheme() {

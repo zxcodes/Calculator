@@ -5,6 +5,7 @@
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
+  -webkit-appearance: none;
 }
 
 .wrapper {
@@ -17,17 +18,21 @@
   background-color: rgb(28, 231, 221);
   transition: 0.8s all;
 }
+
 h1 {
   text-align: center;
   margin-bottom: 1.5%;
   color: #fff;
 }
+
 .container {
   width: 300px;
 }
+
 .result {
   width: 59.1%;
 }
+
 input {
   padding: 25px;
   color: rgb(87, 87, 87);
@@ -45,23 +50,28 @@ input {
 .third-row,
 .fourth-row,
 .fifth-row {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
+
 input[type="button"] {
   color: rgb(122, 122, 122);
 }
+
 input[type="text"] {
   background-color: rgb(255, 255, 255);
-  width: 218px;
+  width: 219.5px;
 }
+
 input[type="button"]:hover {
   background-color: rgb(37, 35, 59);
   color: #fff;
 }
+
 #clear {
   color: #fff;
   background-color: rgb(255, 25, 25);
 }
+
 button {
   border: none;
   background-color: rgb(41, 38, 38);
@@ -88,10 +98,12 @@ a {
   font-size: 0.8em;
   font-weight: 600;
 }
+
 .bottom-buttons {
   display: flex;
   margin-left: -2.3px;
 }
+
 .fab {
   font-size: 1.1em;
   padding: 0 0.2em;
