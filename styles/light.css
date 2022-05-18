@@ -3,8 +3,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans';
   -webkit-appearance: none;
 }
 
@@ -15,18 +14,35 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(28, 231, 221);
+  background-color: rgb(7, 210, 199);
   transition: 0.8s all;
 }
 
 h1 {
-  text-align: center;
   margin-bottom: 1.5%;
   color: #fff;
+  font-weight: normal;
 }
 
 .container {
-  width: 300px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.top-buttons {
+  display: flex;
+  align-items: center;
+
 }
 
 .result {
@@ -42,7 +58,8 @@ input {
   background-color: #fff;
   border: none;
   outline: none;
-  border-radius: 4px;
+  border-radius: 100px;
+  margin: 0.2em;
 }
 
 .first-row,
@@ -59,7 +76,7 @@ input[type="button"] {
 
 input[type="text"] {
   background-color: rgb(255, 255, 255);
-  width: 219.5px;
+  width: 222.5px;
 }
 
 input[type="button"]:hover {
@@ -85,26 +102,16 @@ button {
   font-weight: 600;
 }
 
+
 a {
   text-decoration: none;
-  border: none;
-  background-color: rgb(41, 38, 38);
-  padding: 8px;
-  color: white;
-  margin: 2px;
+  color: #fff;
+}
+
+#github-icon {
+  margin-right: 10px;
+}
+
+#sun-icon {
   cursor: pointer;
-  outline: none;
-  border-radius: 4px;
-  font-size: 0.8em;
-  font-weight: 600;
-}
-
-.bottom-buttons {
-  display: flex;
-  margin-left: -2.3px;
-}
-
-.fab {
-  font-size: 1.1em;
-  padding: 0 0.2em;
 }

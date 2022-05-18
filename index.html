@@ -5,19 +5,33 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Calculator</title>
-  <meta name="description" content="" />
+  <meta name="description" content="Simple Calculator WIth Dark Mode." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles/dark.css" id="theme" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/dark.css" id="theme" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
   <div class="wrapper">
     <div class="container">
-      <h1>Calculator</h1>
+      <div class="header-container">
+        <!-- This heading also notifies about the theme change.-->
+        <h1 id="toast">Calculator</h1>
+        <div class="top-buttons">
+          <a href="https://github.com/zxcodes/JavaScript-Calculator">
+            <img src="./assets/GitHubLight.svg" alt="Sun Icon" height="22.5" width="22.5" id="github-icon">
+          </a>
+          <button onclick="changeTheme()" style="all: unset;">
+            <img src="./assets/SunIcon.svg" alt="Sun Icon" height="19" width="19" id="theme-icon">
+          </button>
+        </div>
+      </div>
       <div class="first-row">
-        <input type="text" name="result" class="result" id="result" value="" placeholder="Result" readonly />
-        <input type="button" value="C" onclick="clearScreen()" id="clear" />
+        <input type="text" name="result" class="result" id="result" placeholder="Result" readonly />
+        <input type="button" value="C" onclick="result.value=''" id="clear" />
       </div>
       <div class="second-row">
         <input type="button" value="1" onclick="liveScreen(1)" id="one" />
@@ -39,23 +53,14 @@
       </div>
       <div class="fifth-row">
         <input type="button" value="/" onclick="liveScreen('/')" />
-
         <input type="button" value="0" id="zero" onclick="liveScreen(0)" />
         <input type="button" value="." class="dot" onclick="liveScreen('.')" />
-        <input type="button" value="=" onclick="result.value = eval(result.value||null)" />
-      </div>
-      <div class="bottom-buttons">
-        <a href="https://github.com/zxcodes/JavaScript-Calculator"><i class="fab fa-github"></i>
-          Source</a>
-        <button onclick="changeTheme()" id="dark-mode">
-          Light Mode ☀️
-        </button>
+        <input type="button" value="=" onclick="calculate(result.value)" />
       </div>
     </div>
   </div>
-  <!-- Fontawesome Script -->
-  <script src="https://kit.fontawesome.com/f28b055962.js" crossorigin="anonymous"></script>
-  <script src="scripts/script.js"></script>
+  <script src="./scripts/script.js">
+  </script>
 </body>
 
 </html>
