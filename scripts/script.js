@@ -12,7 +12,7 @@ function calculate(value) {
     res.value = "Can't divide 0 with 0";
     setTimeout(() => {
       res.value = "";
-    }, 1100);
+    }, 1300);
   } else {
     res.value = calculatedValue;
   }
@@ -23,7 +23,7 @@ function changeTheme() {
   const theme = document.getElementById("theme");
   setTimeout(() => {
     toast.innerHTML = "Calculator";
-  }, 1300);
+  }, 1500);
   if (theme.getAttribute("href") === lightTheme) {
     theme.setAttribute("href", darkTheme);
     themeIcon.setAttribute("src", sunIcon);
@@ -49,7 +49,7 @@ document.addEventListener("keydown", keyboardInputHandler);
 //function to handle keyboard inputs
 function keyboardInputHandler(e) {
   // to fix the default behavior of browser,
-  // enter and backspace were causing undesired behavior when some key was already in focus. 
+  // enter and backspace were causing undesired behavior when some key was already in focus.
   e.preventDefault();
   //grabbing the liveScreen
 
