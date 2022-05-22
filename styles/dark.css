@@ -49,10 +49,6 @@ h1 {
 
 }
 
-.result {
-  width: 59.1%;
-}
-
 input {
   padding: 25px;
   color: rgb(255, 255, 255);
@@ -98,6 +94,7 @@ a {
   margin-right: 10px;
 }
 
-#sun-icon {
+.theme-button {
+  all: unset;
   cursor: pointer;
 }

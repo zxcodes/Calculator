@@ -42,11 +42,6 @@ h1 {
 .top-buttons {
   display: flex;
   align-items: center;
-
-}
-
-.result {
-  width: 59.1%;
 }
 
 input {
@@ -89,20 +84,6 @@ input[type="button"]:hover {
   background-color: rgb(255, 25, 25);
 }
 
-button {
-  border: none;
-  background-color: rgb(41, 38, 38);
-  padding: 8px;
-  color: white;
-  margin: 2px;
-  cursor: pointer;
-  outline: none;
-  border-radius: 4px;
-  font-size: 0.8em;
-  font-weight: 600;
-}
-
-
 a {
   text-decoration: none;
   color: #fff;
@@ -112,6 +93,7 @@ a {
   margin-right: 10px;
 }
 
-#sun-icon {
+.theme-button {
+  all: unset;
   cursor: pointer;
 }
