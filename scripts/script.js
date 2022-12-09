@@ -2,6 +2,9 @@ const lightTheme = "styles/light.css";
 const darkTheme = "styles/dark.css";
 const sunIcon = "assets/SunIcon.svg";
 const moonIcon = "assets/MoonIcon.svg";
+const githubLight = "assets/githubLight.svg";
+const githubDark = "assets/githubDark.svg";
+const githubIcon = document.getElementById('github-icon');
 const themeIcon = document.getElementById("theme-icon");
 const res = document.getElementById("result");
 const toast = document.getElementById("toast");
@@ -27,11 +30,13 @@ function changeTheme() {
   if (theme.getAttribute("href") === lightTheme) {
     theme.setAttribute("href", darkTheme);
     themeIcon.setAttribute("src", sunIcon);
-    toast.innerHTML = "Dark Mode 🌙";
+    githubIcon.setAttribute("src", githubDark);
+    toast.innerHTML = "Dark Mode";
   } else {
     theme.setAttribute("href", lightTheme);
     themeIcon.setAttribute("src", moonIcon);
-    toast.innerHTML = "Light Mode ☀️";
+    githubIcon.setAttribute("src", githubLight);
+    toast.innerHTML = "Light Mode";
   }
 }
 

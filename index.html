@@ -21,8 +21,8 @@
         <!-- This heading also notifies about the theme change.-->
         <h1 id="toast">Calculator</h1>
         <div class="top-buttons">
-          <a href="https://github.com/zxcodes/JavaScript-Calculator">
-            <img src="assets/GitHubLight.svg" alt="Sun Icon" height="22.5" width="22.5" id="github-icon">
+          <a target='_blank' href="https://github.com/zxcodes/JavaScript-Calculator">
+            <img src="assets/GitHubDark.svg" alt="Sun Icon" height="22.5" width="22.5" id="github-icon">
           </a>
           <button type="button" onclick="changeTheme()" class="theme-button">
             <img src="assets/SunIcon.svg" alt="Theme Icon" height="19" width="19" id="theme-icon">
@@ -34,28 +34,28 @@
         <input type="button" value="C" onclick="result.value=''" id="clear-button" />
       </div>
       <div class="second-row">
-        <input type="button" value="1" onclick="liveScreen(1)" />
-        <input type="button" value="2" onclick="liveScreen(2)" />
-        <input type="button" value="3" onclick="liveScreen(3)" />
-        <input type="button" value="+" onclick="liveScreen('+')" />
+        <input type="button" class='btn' value="1" onclick="liveScreen(1)" />
+        <input type="button" class='btn' value="2" onclick="liveScreen(2)" />
+        <input type="button" class='btn' value="3" onclick="liveScreen(3)" />
+        <input type="button" class='btn' value="+" onclick="liveScreen('+')" />
       </div>
       <div class="third-row">
-        <input type="button" value="4" onclick=" liveScreen(4)" />
-        <input type="button" value="5" onclick=" liveScreen(5)" />
-        <input type="button" value="6" onclick=" liveScreen(6)" />
-        <input type="button" value="-" onclick="liveScreen('-')" />
+        <input type="button" class='btn' value="4" onclick=" liveScreen(4)" />
+        <input type="button" class='btn' value="5" onclick=" liveScreen(5)" />
+        <input type="button" class='btn' value="6" onclick=" liveScreen(6)" />
+        <input type="button" class='btn' value="-" onclick="liveScreen('-')" />
       </div>
       <div class="fourth-row">
-        <input type="button" value="7" onclick="liveScreen(7)" />
-        <input type="button" value="8" onclick="liveScreen(8)" />
-        <input type="button" value="9" onclick=" liveScreen(9)" />
-        <input type="button" value="x" onclick="liveScreen('*')" />
+        <input type="button" class='btn' value="7" onclick="liveScreen(7)" />
+        <input type="button" class='btn' value="8" onclick="liveScreen(8)" />
+        <input type="button" class='btn' value="9" onclick=" liveScreen(9)" />
+        <input type="button" class='btn' value="x" onclick="liveScreen('*')" />
       </div>
       <div class="fifth-row">
-        <input type="button" value="/" onclick="liveScreen('/')" />
-        <input type="button" value="0" onclick="liveScreen(0)" />
-        <input type="button" value="." onclick="liveScreen('.')" />
-        <input type="button" value="=" onclick="calculate(result.value)" />
+        <input type="button" class='btn' value="/" onclick="liveScreen('/')" />
+        <input type="button" class='btn' value="0" onclick="liveScreen(0)" />
+        <input type="button" class='btn' value="." onclick="liveScreen('.')" />
+        <input type="button" class='btn' value="=" onclick="calculate(result.value)" />
       </div>
     </div>
   </div>

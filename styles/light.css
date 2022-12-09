@@ -14,22 +14,26 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(7, 210, 199);
+  background-color: #f8f6f4;
   transition: 0.8s all;
 }
 
 h1 {
   margin-bottom: 1.5%;
-  color: #fff;
-  font-weight: normal;
+  color: rgb(122, 122, 122);
+  font-weight: bolder;
+  font-size: 25px;
 }
 
 .container {
-  width: 350px;
+  width: 400px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding:12px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .header-container {
@@ -37,6 +41,10 @@ h1 {
   justify-content: space-between;
   align-items: center;
   width: 80%;
+}
+
+#result{
+  width:238px;
 }
 
 .top-buttons {
@@ -54,7 +62,15 @@ input {
   border: none;
   outline: none;
   border-radius: 100px;
-  margin: 0.2em;
+  margin: 0.3em;
+  font-weight:600 ;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.btn:active{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  background-color: rgb(37, 35, 59);
+  color: #fff;
 }
 
 .first-row,
@@ -75,7 +91,7 @@ input[type="text"] {
 }
 
 input[type="button"]:hover {
-  background-color: rgb(37, 35, 59);
+  background-color: #292826;
   color: #fff;
 }
 
