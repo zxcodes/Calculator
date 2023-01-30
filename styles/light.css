@@ -82,6 +82,7 @@ input {
 }
 
 input[type="button"] {
+  transition: all 0.2s ease;
   color: rgb(122, 122, 122);
 }
 
@@ -91,7 +92,7 @@ input[type="text"] {
 }
 
 input[type="button"]:hover {
-  background-color: #292826;
+  background-color: rgb(107, 107, 107);
   color: #fff;
 }
 
