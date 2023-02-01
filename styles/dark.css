@@ -80,9 +80,9 @@ input[type="button"]:hover {
   color: #fff;
 }
 
-#clear-button,#equal-button {
+#clear-button,input[id="equal-button"] {
   color: #fff;
-  background-color: rgb(68, 87, 56);
+  background-color: rgb(100, 172, 55);
 }
 
 a {
