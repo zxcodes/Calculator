@@ -18,7 +18,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(20, 19, 19);
+  background : linear-gradient(90deg , rgb(73, 73, 73), black);
   transition: 0.8s all;
 }
 
@@ -34,6 +34,9 @@ h1 {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: black;
+  height: 50%;
+  border-radius: 20px;
 }
 
 .header-container {
@@ -80,9 +83,9 @@ input[type="button"]:hover {
   color: #fff;
 }
 
-#clear-button {
+#clear-button,input[id="equal-button"] {
   color: #fff;
-  background-color: rgb(255, 42, 42);
+  background-color: rgb(100, 172, 55);
 }
 
 a {
