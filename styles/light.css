@@ -30,6 +30,9 @@ h1 {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(255, 144, 249);
+  height: 50%;
+  border-radius: 20px;
 }
 
 .header-container {

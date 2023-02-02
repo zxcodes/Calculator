@@ -34,6 +34,9 @@ h1 {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: black;
+  height: 50%;
+  border-radius: 20px;
 }
 
 .header-container {
