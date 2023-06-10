@@ -6,6 +6,9 @@ const themeIcon = document.getElementById("theme-icon");
 const res = document.getElementById("result");
 const toast = document.getElementById("toast");
 
+const operators = ["+", "-", "*", "/"]
+let last_num = ""
+
 function calculate(value) {
   const calculatedValue = eval(value || null);
   if (isNaN(calculatedValue)) {
@@ -15,7 +18,13 @@ function calculate(value) {
     }, 1300);
   } else {
     res.value = calculatedValue;
+    last_num = calculatedValue.toString()
   }
+}
+
+function clearValue(){
+  result.value = "";
+  last_num = "";
 }
 
 // Swaps the stylesheet to achieve dark mode.
@@ -40,7 +49,8 @@ function liveScreen(enteredValue) {
   if (!res.value) {
     res.value = "";
   }
-  res.value += enteredValue;
+  keyboardInputHandler({key:enteredValue})
+  //res.value += enteredValue;
 }
 
 //adding event handler on the document to handle keyboard inputs
@@ -48,50 +58,39 @@ document.addEventListener("keydown", keyboardInputHandler);
 
 //function to handle keyboard inputs
 function keyboardInputHandler(e) {
+
   // to fix the default behavior of browser,
   // enter and backspace were causing undesired behavior when some key was already in focus.
-  e.preventDefault();
+  if (e.target){
+    e.preventDefault();
+  }
   //grabbing the liveScreen
 
   //numbers
-  if (e.key === "0") {
-    res.value += "0";
-  } else if (e.key === "1") {
-    res.value += "1";
-  } else if (e.key === "2") {
-    res.value += "2";
-  } else if (e.key === "3") {
-    res.value += "3";
-  } else if (e.key === "4") {
-    res.value += "4";
-  } else if (e.key === "5") {
-    res.value += "5";
-  } else if (e.key === "6") {
-    res.value += "6";
-  } else if (e.key === "7") {
-    res.value += "7";
-  } else if (e.key === "7") {
-    res.value += "7";
-  } else if (e.key === "8") {
-    res.value += "8";
-  } else if (e.key === "9") {
-    res.value += "9";
+  if (isFinite(e.key)){
+    res.value += e.key;
+    last_num += e.key
   }
 
+  var last_char = res.value[res.value.length-1]
+
   //operators
-  if (e.key === "+") {
-    res.value += "+";
-  } else if (e.key === "-") {
-    res.value += "-";
-  } else if (e.key === "*") {
-    res.value += "*";
-  } else if (e.key === "/") {
-    res.value += "/";
+  if (operators.includes(e.key)){
+    // replace last operator if already exists
+    if (operators.includes(last_char)){
+      res.value = res.value.slice(0, -1)
+    }
+    last_num = ""
+    res.value += e.key;
   }
 
   //decimal key
   if (e.key === ".") {
-    res.value += ".";
+    // allow only one decimal
+    if (last_char !== e.key && !last_num.includes(e.key)){
+      res.value += e.key;
+      last_num += e.key
+    }
   }
 
   //press enter to see result
@@ -104,5 +103,6 @@ function keyboardInputHandler(e) {
     const resultInput = res.value;
     //remove the last element in the string
     res.value = resultInput.substring(0, res.value.length - 1);
+    last_num = last_num.slice(0, -1)
   }
 }
