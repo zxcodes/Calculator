@@ -49,7 +49,8 @@ function liveScreen(enteredValue) {
   if (!res.value) {
     res.value = "";
   }
-  res.value += enteredValue;
+  keyboardInputHandler({key:enteredValue})
+  //res.value += enteredValue;
 }
 
 //adding event handler on the document to handle keyboard inputs
@@ -57,9 +58,12 @@ document.addEventListener("keydown", keyboardInputHandler);
 
 //function to handle keyboard inputs
 function keyboardInputHandler(e) {
+
   // to fix the default behavior of browser,
   // enter and backspace were causing undesired behavior when some key was already in focus.
-  e.preventDefault();
+  if (e.target){
+    e.preventDefault();
+  }
   //grabbing the liveScreen
 
   //numbers
