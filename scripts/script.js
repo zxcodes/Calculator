@@ -4,9 +4,14 @@ const sunIcon = "assets/SunIcon.svg";
 const moonIcon = "assets/MoonIcon.svg";
 const themeIcon = document.getElementById("theme-icon");
 const res = document.getElementById("result");
+var lastNumber = "";
+var currentNumber = "";
+var isPositive = true;
 const toast = document.getElementById("toast");
 
 function calculate(value) {
+  value = value.replace('²',"**2")
+  value = value.replace("--",'+')
   const calculatedValue = eval(value || null);
   if (isNaN(calculatedValue)) {
     res.value = "Can't divide 0 with 0";
@@ -16,6 +21,10 @@ function calculate(value) {
   } else {
     res.value = calculatedValue;
   }
+  lastNumber = currentNumber;
+  currentNumber = "";
+  res.value += enteredValue;
+  isPositive = true
 }
 
 // Swaps the stylesheet to achieve dark mode.
@@ -40,7 +49,33 @@ function liveScreen(enteredValue) {
   if (!res.value) {
     res.value = "";
   }
-  res.value += enteredValue;
+    
+  if(enteredValue == '+' || enteredValue == '-' || enteredValue == '*' || enteredValue == '/'){
+      lastNumber = currentNumber;
+      currentNumber = "";
+      res.value += enteredValue;
+      isPositive = true
+  }
+  else if(enteredValue == 'C'){
+      lastNumber = ""
+    currentNumber = ""
+    res.value = ''
+      isPositive = true
+  }
+  else if(enteredValue == '+/-'){
+      res.value = res.value.substring(0, res.value.length - currentNumber.length - (!isPositive ? 1 : 0));
+      res.value += currentNumber * (isPositive ? -1 : 1);
+      isPositive = !isPositive;
+  }
+  else if(enteredValue != '%'){
+      currentNumber += enteredValue
+      res.value += enteredValue;
+  }
+  else {
+      res.value = res.value.substring(0, res.value.length - currentNumber.length);
+      enteredValue = lastNumber / 100 * currentNumber * (isPositive ? -1 : 1);
+      res.value += enteredValue;
+  }
 }
 
 //adding event handler on the document to handle keyboard inputs
@@ -81,12 +116,28 @@ function keyboardInputHandler(e) {
   //operators
   if (e.key === "+") {
     res.value += "+";
+    lastNumber = currentNumber;
+    currentNumber = "";
+    res.value += enteredValue;
+    isPositive = true
   } else if (e.key === "-") {
     res.value += "-";
+    lastNumber = currentNumber;
+    currentNumber = "";
+    res.value += enteredValue;
+    isPositive = true
   } else if (e.key === "*") {
     res.value += "*";
+    lastNumber = currentNumber;
+    currentNumber = "";
+    res.value += enteredValue;
+    isPositive = true
   } else if (e.key === "/") {
     res.value += "/";
+    lastNumber = currentNumber;
+    currentNumber = "";
+    res.value += enteredValue;
+    isPositive = true
   }
 
   //decimal key
@@ -97,6 +148,10 @@ function keyboardInputHandler(e) {
   //press enter to see result
   if (e.key === "Enter") {
     calculate(result.value);
+    lastNumber = currentNumber;
+    currentNumber = "";
+    res.value += enteredValue;
+    isPositive = true
   }
 
   //backspace for removing the last input
