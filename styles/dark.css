@@ -29,7 +29,7 @@ h1 {
 }
 
 .container {
-  width: 350px;
+  width: 450px;
   display: flex;
   justify-content: center;
   flex-direction: column;
