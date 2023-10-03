@@ -14,7 +14,7 @@ function calculate(value) {
       res.value = "";
     }, 1300);
   } else {
-    res.value = calculatedValue;
+    res.value = calculatedValue.toFixed(4);
   }
 }
 
