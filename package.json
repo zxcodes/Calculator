@@ -1,0 +1,16 @@
+{
+  "name": "Calculator",
+  "version": "1.0.0",
+  "description": "Calculator app",
+  "main": "index.js",
+  "repository": "https://github.com/zxcodes/Calculator.git",
+  "author": "Mohammed Farmaan <farmaanghouse6@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "jest tests"
+  }
+}
