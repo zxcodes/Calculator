@@ -35,11 +35,28 @@ function changeTheme() {
   }
 }
 
+// Flag to track if an operator has been entered
+let operatorEntered = false;
+
 // Displays entered value on screen.
 function liveScreen(enteredValue) {
+  if (!res.value && ["+", "-", "*", "/"].includes(enteredValue)) {
+    return;
+  }
+
   if (!res.value) {
     res.value = "";
   }
+
+  if (["+", "-", "*", "/"].includes(enteredValue)) {
+    if (operatorEntered) {
+      return;
+    }
+    operatorEntered = true;
+  } else {
+    operatorEntered = false;
+  }
+
   res.value += enteredValue;
 }
 
