@@ -54,45 +54,10 @@ function keyboardInputHandler(e) {
   //grabbing the liveScreen
 
   //numbers
-  if (e.key === "0") {
-    res.value += "0";
-  } else if (e.key === "1") {
-    res.value += "1";
-  } else if (e.key === "2") {
-    res.value += "2";
-  } else if (e.key === "3") {
-    res.value += "3";
-  } else if (e.key === "4") {
-    res.value += "4";
-  } else if (e.key === "5") {
-    res.value += "5";
-  } else if (e.key === "6") {
-    res.value += "6";
-  } else if (e.key === "7") {
-    res.value += "7";
-  } else if (e.key === "7") {
-    res.value += "7";
-  } else if (e.key === "8") {
-    res.value += "8";
-  } else if (e.key === "9") {
-    res.value += "9";
-  }
+  checkNumbers(e.key)
 
-  //operators
-  if (e.key === "+") {
-    res.value += "+";
-  } else if (e.key === "-") {
-    res.value += "-";
-  } else if (e.key === "*") {
-    res.value += "*";
-  } else if (e.key === "/") {
-    res.value += "/";
-  }
-
-  //decimal key
-  if (e.key === ".") {
-    res.value += ".";
-  }
+  //checking operators & decimal key
+  checkOperator(e.key)
 
   //press enter to see result
   if (e.key === "Enter") {
@@ -105,4 +70,19 @@ function keyboardInputHandler(e) {
     //remove the last element in the string
     res.value = resultInput.substring(0, res.value.length - 1);
   }
+}
+
+function checkNumbers(digit){
+  if (digit === "0" || digit === "1" || digit === "2" || digit === "3" || digit === "4"
+      || digit === "5" || digit === "6" || digit === "7" || digit === "8" || digit === "9"){
+        res.value += digit
+      }
+}
+
+function checkOperator(operator){
+  if(operator === "+" || operator === "-" || operator === "*" || operator === "/"
+    || operator === "."){
+    res.value += operator;
+  }
+
 }
